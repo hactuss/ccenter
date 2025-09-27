@@ -1,6 +1,6 @@
 @import "tailwindcss";
 * {
-    border: solid red 1px;
+    border: solid black 1px;
     margin: 0.5px;
     width: 100%;
     text-align: center;
@@ -9,9 +9,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #main_container {
-    padding: 10%;
-
-    border: solid red 8px;
+    background-color: rgb(140 180 255);
 }
 nav {
     border: solid lightskyblue;
@@ -22,16 +20,18 @@ main {
 }
 h1 {
     font-size: 2rem;
+    text-align: center;
+}
+h2 {
+    font-size: 2rem;
+    text-align: start;
 }
 input {
     background-color: lightgray;
 }
 button {
-    border: solid red;
 }
-button:hover {
-    background-color: blue;
-}
-button:active {
-    background-color: darkblue;
+a::after {
+    content: url("lib/assets/external.png");
+    size: 16px;
 }
