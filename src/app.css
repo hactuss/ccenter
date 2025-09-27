@@ -1,0 +1,37 @@
+@import "tailwindcss";
+* {
+    border: solid red 1px;
+    margin: 0.5px;
+    width: 100%;
+    text-align: center;
+}
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#main_container {
+    padding: 10%;
+
+    border: solid red 8px;
+}
+nav {
+    border: solid lightskyblue;
+}
+main {
+    border: solid 4px blue;
+    border-radius: 5px;
+}
+h1 {
+    font-size: 2rem;
+}
+input {
+    background-color: lightgray;
+}
+button {
+    border: solid red;
+}
+button:hover {
+    background-color: blue;
+}
+button:active {
+    background-color: darkblue;
+}
