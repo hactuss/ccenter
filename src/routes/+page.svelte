@@ -30,20 +30,20 @@
     <div class="flex">
         <div class="flex flex-col w-[100%]">
             <div>
-                <label for="">element width</label>
-                <input type="number" value={ew} />
-            </div>
-            <div>
-                <label for="">element height</label>
-                <input type="number" value={eh} />
-            </div>
-            <div>
                 <label for="">canvas width</label>
                 <input type="number" value={cw} />
             </div>
             <div>
                 <label for="">canvas height</label>
                 <input type="number" value={ch} />
+            </div>
+            <div>
+                <label for="">element width</label>
+                <input type="number" value={ew} />
+            </div>
+            <div>
+                <label for="">element height</label>
+                <input type="number" value={eh} />
             </div>
         </div>
         <div class="w-[100%]">
