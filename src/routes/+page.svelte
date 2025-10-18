@@ -1,10 +1,13 @@
 <script>
+    import { derived } from "svelte/store";
+
     let ew = 0;
     let eh = 0;
     let cw = 0;
     let ch = 0;
     let center_x = 0;
     let center_y = 0;
+    let ratio = 0;
 
     //presets
     function pre_A4() {
@@ -21,9 +24,15 @@
         cw = 1280;
         ch = 720;
     }
+    function calc() {
+        center_x = 0;
+        center_y = 0;
+        console.log(ew, eh);
+        return ((center_x = cw / 2 - ew / 2), (center_y = ch / 2 - eh / 2));
+    }
 </script>
 
-<div id="main_container">
+<main id="main_container">
     <nav class="flex">
         <h2>Center calculator for graphic design</h2>
     </nav>
@@ -31,19 +40,24 @@
         <div class="flex flex-col w-[100%]">
             <div>
                 <label for="">canvas width</label>
-                <input type="number" value={cw} />
+                <input
+                    type="number"
+                    bind:value={cw}
+                    oninput={calc}
+                    onchange={calc}
+                />
             </div>
             <div>
                 <label for="">canvas height</label>
-                <input type="number" value={ch} />
+                <input type="number" bind:value={ch} oninput={calc} />
             </div>
             <div>
                 <label for="">element width</label>
-                <input type="number" value={ew} />
+                <input type="number" bind:value={ew} oninput={calc} />
             </div>
             <div>
                 <label for="">element height</label>
-                <input type="number" value={eh} />
+                <input type="number" bind:value={eh} oninput={calc} />
             </div>
         </div>
         <div class="w-[100%]">
@@ -67,21 +81,36 @@
             </div>
         </div>
     </div>
+    <!--
     <button
         id="calculate"
         onclick={() => {
-            center_x = cw / 2 - ew / 2;
-            center_y = ch / 2 - eh / 2;
+            calc();
         }}>calculate</button
-    >
+    > -->
     <h1>X: {center_x} px</h1>
     <h1>Y: {center_y} px</h1>
     <div>
         <a href="https://hactuss.vercel.app">made by hactuss</a>
         <a href="https://github.com/hactuss/ccenter">Source code</a>
     </div>
-</div>
+</main>
 
+<!--
+<main>
+    <h2>r</h2>
+    <div>
+        <p>ratio</p>
+        <input
+            type="number"
+            name=""
+            id=""
+            bind:value={ratio}
+            onchange={value}
+        />
+    </div>
+</main>
+-->
 <style>
     #calculate {
         background-color: darkblue;
