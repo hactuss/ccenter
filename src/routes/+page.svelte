@@ -7,7 +7,15 @@
     let ch = 0;
     let center_x = 0;
     let center_y = 0;
-    let ratio = 0;
+    let length = 100;
+    let ratio = 61.8;
+    let calcratio = () => {
+        return (length / 100) * ratio * 100;
+    };
+
+    let min = 0;
+    let max = 1920;
+    let calculateratio;
 
     //presets
     function pre_A4() {
@@ -32,9 +40,9 @@
     }
 </script>
 
-<main id="main_container">
-    <nav class="flex">
-        <h2>Center calculator for graphic design</h2>
+<main id="center-calc">
+    <nav>
+        <div><h2>Center calculator for graphic design</h2></div>
     </nav>
     <div class="flex">
         <div class="flex flex-col w-[100%]">
@@ -97,17 +105,30 @@
 </main>
 
 <!--
-<main>
-    <h2>r</h2>
-    <div>
-        <p>ratio</p>
-        <input
-            type="number"
-            name=""
-            id=""
-            bind:value={ratio}
-            onchange={value}
-        />
+<br />
+<main id="ratio-calc">
+    <h2>Ratio calc</h2>
+    <div class="flex flex-row">
+        <div>
+            <button>golden ratio (1.618)</button>
+            <label for="">total length</label>
+            <input
+                type="number"
+                name=""
+                id=""
+                bind:value={length}
+                onchange={calcratio}
+            />
+
+            <p>{calcratio}</p>
+        </div>
+        <div>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Golden_ratio_line_percentages.svg/2880px-Golden_ratio_line_percentages.svg.png"
+                alt=""
+                id="wikipedia_img"
+            />
+        </div>
     </div>
 </main>
 -->

@@ -9,14 +9,16 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#main_container {
+#center-calc {
     background-color: rgb(140 180 255);
+}
+#ratio-calc {
+    background-color: rgb(140 150 230);
 }
 nav {
     border: solid lightskyblue;
 }
 main {
-    border: solid 4px blue;
     border-radius: 5px;
 }
 h1 {
@@ -26,6 +28,7 @@ h1 {
 h2 {
     font-size: 2rem;
     text-align: start;
+    /*background-color: rgb(50 0 50);*/
 }
 input {
     background-color: lightgray;
@@ -35,4 +38,7 @@ button {
 a::after {
     content: url("lib/assets/external.png");
     size: 16px;
+}
+#wikipedia_img {
+    width: 500px;
 }
