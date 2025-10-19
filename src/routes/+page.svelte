@@ -104,9 +104,9 @@
     </div>
 </main>
 
-<!--
+
 <br />
-<main id="ratio-calc">
+<main id="ratio-calc" style="display:hidden;">
     <h2>Ratio calc</h2>
     <div class="flex flex-row">
         <div>
@@ -131,7 +131,7 @@
         </div>
     </div>
 </main>
--->
+
 <style>
     #calculate {
         background-color: darkblue;
