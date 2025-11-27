@@ -1,7 +1,7 @@
 @import "tailwindcss";
 * {
-    border: solid black 1px;
-    margin: 0.5px;
+    /*border: solid black 1px;*/
+    margin: 0px;
     width: 100%;
     text-align: center;
 }
@@ -18,9 +18,7 @@
 nav {
     border: solid lightskyblue;
 }
-main {
-    border-radius: 5px;
-}
+
 h1 {
     font-size: 2rem;
     text-align: center;
@@ -31,9 +29,11 @@ h2 {
     /*background-color: rgb(50 0 50);*/
 }
 input {
-    background-color: lightgray;
+    background-color: black;
+    border: solid white 1px;
 }
 button {
+    border: 1px solid white;
 }
 a::after {
     content: url("lib/assets/external.png");
@@ -41,4 +41,36 @@ a::after {
 }
 #wikipedia_img {
     width: 500px;
+}
+body {
+    padding-left: 12.6%;
+    padding-right: 12.6%;
+}
+html {
+    background: url("https://i.pinimg.com/736x/40/25/e1/4025e135470ade059a7c4de3dd2a40c7.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 100dvh;
+}
+@media (width < 500px) {
+    #newMain {
+        height: 100dvh;
+    }
+    #buttonholder {
+        display: flex;
+        flex-direction: column;
+    }
+    #inputs,
+    #titlebar,
+    #presets {
+        margin-bottom: 10%;
+    }
+    body {
+        padding: 0;
+    }
+    input,
+    button {
+        height: 3rem;
+    }
 }
